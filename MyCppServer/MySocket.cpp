@@ -17,7 +17,7 @@ MySocket::MySocket(int _fd) : fd(_fd)
 
 MySocket::~MySocket()
 {
-    if(fd == -1)
+    if(fd != -1)
     {
         close(fd);
         fd = -1;
